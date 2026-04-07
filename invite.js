@@ -58,7 +58,7 @@ function formatGoogleCalendarDate(data) {
         const dt = data.datetime || {};
 
         const start = dt.__start;
-        const end = new Date("2026-05-03T15:00:00+09:00");
+        const end = dt.__end;
 
         if (!start || !end) return null;
 
@@ -278,7 +278,10 @@ fetch(EVENT_JSON_URL)
         }
 
         if (data.calendar?.enabled && data.calendar?.providers?.google) {
-            const dates = formatGoogleCalendarDate(data);
+            const dates = {
+                start: data.datetime.__start ? formatGoogleCalendarDate(data).start : "20260503T020000Z",
+                end: data.datetime.__end ? formatGoogleCalendarDate(data).end : "20260503T060000Z"
+            };
             if (dates) {
                 const calBase = "https://calendar.google.com/calendar/render?action=TEMPLATE";
                 const params = new URLSearchParams();
