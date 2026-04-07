@@ -1,6 +1,6 @@
 const EVENT_JSON_URL = './event.json';
 
-function parseEventDate(dateStr, timeStr, timezone = 'local') {
+function parseEventDate1(dateStr, timeStr, timezone = 'local') {
     if (!dateStr) return null;
 
     const time = timeStr ? timeStr.replace(' ', '') : '00:00';
@@ -13,6 +13,31 @@ function parseEventDate(dateStr, timeStr, timezone = 'local') {
         if (isNaN(date.getTime())) {
             date = new Date(`${dateStr} ${timeStr || ''}`);
         }
+    }
+
+    return isNaN(date.getTime()) ? null : date;
+}
+
+function parseEventDate(dateStr, timeStr, timezone = 'local') {
+    if (!dateStr) return null;
+
+    const [y, m, d] = dateStr.split('-').map(Number);
+
+    let h = 0, min = 0, s = 0;
+
+    if (timeStr) {
+        const parts = timeStr.split(':').map(Number);
+        h = parts[0] || 0;
+        min = parts[1] || 0;
+        s = parts[2] || 0;
+    }
+
+    let date;
+
+    if (timezone === 'UTC') {
+        date = new Date(Date.UTC(y, m - 1, d, h, min, s));
+    } else {
+        date = new Date(y, m - 1, d, h, min, s);
     }
 
     return isNaN(date.getTime()) ? null : date;
@@ -102,7 +127,7 @@ function startCountdown(data) {
     if (!container) return;
 
     const dt = data.datetime || {};
-    const target = new Date(dt.__start); // use only normalized start
+    const target = dt.__start; // use only normalized start
 
     if (!target || target <= new Date()) {
         container.hidden = true;
