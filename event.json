@@ -1,0 +1,70 @@
+{
+    "_meta_comment": "TEMPLATE CONFIGURATION",
+    "meta": {
+        "version": "1.1",
+        "private": false,
+        "simpleMode": false,
+        "showSimpleModeToggle": false,
+        "countdown": true
+    },
+    "event": {
+        "title": "Ko Ko & Nwe's Wedding",
+        "subtitle": "A Celebration of Love & Laughter",
+        "description": "မင်္ဂလာဧည့်ခံပွဲကျင်းပမည့် နေရာ"
+    },
+    "datetime": {
+        "date": "2026-05-03",
+        "dateMyan": "၂၀၂၆ ခုနှစ် မေ ၃ ရက် (တနင်္ဂနွေနေ့)",
+        "startTime": "11:00 AM",
+        "startTimeMyan": "နံနက် (11:00) နာရီ မှ ညနေ (3:00) နာရီအထိ",
+        "timezone": "local",
+        "allDay": false
+    },
+    "location": {
+        "name": "SAKURA Khit",
+        "address": "Sugamo Station",
+        "mapsLink": "https://maps.app.goo.gl/xu56GALT6jd6oaCx5"
+    },
+    "schedule": [
+        {
+            "time": "နံနက် (11:00) နာရီ",
+            "label": "မင်္ဂလာဧည့်ခံပွဲစတင်ချိန်"
+        },
+        {
+            "time": "ညနေ (3:00) နာရီ",
+            "label": "မင်္ဂလာဧည့်ခံပွဲပြီးဆုံးချိန်"
+        }
+    ],
+    "rsvp": {
+        "enabled": true,
+        "url": "https://tally.so/r/VLYOGE"
+    },
+    "calendar": {
+        "enabled": true,
+        "providers": {
+            "google": true
+        }
+    },
+    "design": {
+        "accentColor": "#22c55e",
+        "heroImages": [
+            "./media/ATA_4473.jpg",
+            "./media/ATA_4352.jpg",
+            "./media/NAT_7057.jpg",
+            "./media/NAT_6500.jpg",
+            "./media/NAT_6409.jpg"
+        ],
+        "sectionBackgrounds": [
+            "./media/ATA_4303.jpg",
+            "./media/ATA_4613.jpg",
+            "./media/NAT_6878.jpg",
+            "./media/NAT_6335.jpg"
+        ]
+    },
+    "music": {
+        "enabled": true,
+        "loop": true,
+        "volume": 0.9,
+        "audioUrl": "https://youtu.be/4x_UYIlPk54?si=BtR1sPXJZYzpCjeV"
+    }
+}
