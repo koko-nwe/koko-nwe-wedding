@@ -58,7 +58,7 @@ function formatGoogleCalendarDate(data) {
         const dt = data.datetime || {};
 
         const start = dt.__start;
-        const end = dt.__end;
+        const end = new Date("2026-05-03T15:00:00+09:00");
 
         if (!start || !end) return null;
 
