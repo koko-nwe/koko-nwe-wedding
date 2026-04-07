@@ -278,10 +278,7 @@ fetch(EVENT_JSON_URL)
         }
 
         if (data.calendar?.enabled && data.calendar?.providers?.google) {
-            const dates = {
-                start: data.datetime.__start ? formatGoogleCalendarDate(data).start : "20260503T020000Z",
-                end: data.datetime.__end ? formatGoogleCalendarDate(data).end : "20260503T060000Z"
-            };
+            const dates = formatGoogleCalendarDate(data);
             if (dates) {
                 const calBase = "https://calendar.google.com/calendar/render?action=TEMPLATE";
                 const params = new URLSearchParams();
