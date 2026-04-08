@@ -15,12 +15,11 @@
     "datetime": {
         "date": "2026-05-03",
         "dateMyan": "၂၀၂၆ ခုနှစ် မေ ၃ ရက် (တနင်္ဂနွေနေ့)",
-        "startTime": "11:00 AM",
-        "endTime": "3:00 PM",
+        "startTime": "11:00",
+        "endTime": "15:00",
         "startTimeMyan": "နံနက် (11:00) နာရီ မှ ညနေ (3:00) နာရီအထိ",
         "timezone": "local",
-        "allDay": false,
-        "__start": "2026-05-03T11:00:00+09:00"
+        "allDay": false
     },
     "location": {
         "name": "SAKURA Khit",
